@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController
 @SpringBootApplication
 @RestController
 class DemoApplication {
-	@GetMapping
+	@GetMapping("/HelloWorld")
 	fun helloworld():String{
 		return "Hello, World!"
 	}
