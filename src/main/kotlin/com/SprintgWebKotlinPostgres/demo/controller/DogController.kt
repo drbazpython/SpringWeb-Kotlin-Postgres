@@ -5,6 +5,7 @@ import com.SprintgWebKotlinPostgres.demo.repository.DogRepsoitory
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
+import org.springframework.ui.Model
 
 @RestController
 @RequestMapping("/api")
@@ -35,9 +36,10 @@ class DogController {
 	}
 
 	@CrossOrigin
-	@DeleteMapping("/dogs")
+	@DeleteMapping("/dogs/delete/{id}")
 	fun deleteDog(@PathVariable id:Long): ResponseEntity<Unit>{
 		dogRepository.deleteById(id)
 		return ResponseEntity.noContent().build()
 	}
+
 }

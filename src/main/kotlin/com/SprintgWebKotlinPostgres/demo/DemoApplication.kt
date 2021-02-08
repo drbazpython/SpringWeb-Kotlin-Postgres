@@ -16,7 +16,6 @@ import org.springframework.stereotype.Component
 
 class DemoApplication (val dogRepository: DogRepsoitory): ApplicationRunner{
 	override fun run(args:ApplicationArguments){
-
 		val dog1 = Dog (9999,"Meg",9,"B")
 		val dog2 = Dog (9999,"Duffy",5,"B")
 		dogRepository.save(dog1)
